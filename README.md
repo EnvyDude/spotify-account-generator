@@ -10,4 +10,5 @@ This tool is made for only testing purposes and if u use this unethically i do n
 # Contact
 Telegram : @envydude
 
-
+# Credits
+headers etc were boring to make so i used from https://github.com/davide-acanfora/spotify-account-generator :P
