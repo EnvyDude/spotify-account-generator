@@ -9,6 +9,7 @@ This tool is made for only testing purposes and if u use this unethically i do n
 
 # Contact
 Telegram : @envydude
+Discord : Envy.#8456
 
 # Credits
 headers etc were boring to make so i used from https://github.com/davide-acanfora/spotify-account-generator :P
